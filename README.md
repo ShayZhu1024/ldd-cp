@@ -76,4 +76,6 @@ docker run -it --rm bash:1.0.0  bash
 ```
 If some dynamic link libraries are still missing, you may need to manually locate them based on the prompts.
 
+If you want to add other commands, repeat this step in the current working directory. There may be some errors, but they will not affect the creation of the dynamic link library.
+
 
