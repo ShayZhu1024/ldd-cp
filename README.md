@@ -49,3 +49,31 @@ Then you need to place the executable itself into the corresponding bin director
 cp -a `which bash` ./rootfs/bin/
 ```
 OK!!!! 
+
+
+## creating  image 
+
+cd rootfs
+```bash
+tar zcf ../rootfs.tar.gz   ./*
+```
+
+create Dockerfile
+
+```bash
+FROM scratch
+ADD rootfs.tar.gz  /
+ENV ENV LD_LIBRARY_PATH=/lib/:/lib64/:/lib32/:/libx32/  PATH=/bin/:/usr/sbin/
+CMD ["bash"]
+```
+
+Test whether it is effective
+
+```bash
+docker build -t bash:1.0.0  .
+
+docker run -it --rm bash:1.0.0  bash
+```
+If some dynamic link libraries are still missing, you may need to manually locate them based on the prompts.
+
+
