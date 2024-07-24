@@ -7,6 +7,7 @@ Use the ldd command to find the libraries that the dynamically linked program de
 For simple programs, all dependent dynamic link libraries can be found, but for complex programs, some may be missing.
 
 Place this script in a clean working directory.
+The parameter that follows must be the absolute path corresponding to the command.
 
 ```bash
 bash ldd-cp.sh  `which bash`
