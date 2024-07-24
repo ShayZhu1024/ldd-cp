@@ -1,5 +1,5 @@
 # ldd-cp
-Use the ldd command to find the libraries that the dynamically linked program depends on, and build them into the rootfs directory.
+Use the ldd command to find the libraries that the dynamically linked program depends on, and build them into the rootfs directory.  Extremely convenient for building very small Docker images.         
 
 
 ## usage
